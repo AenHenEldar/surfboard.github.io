@@ -1,0 +1,73 @@
+.why {
+  padding: 100px 0 115px 0;
+  color: $black;
+  text-align: center;
+
+  .why__subtitle {
+    display: inline-block;
+    width: 436px;
+    color: $body;
+    margin-top: 20px;
+  }
+
+  .why__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .why__item {
+    width: 280px;
+    text-align: center;
+    position: relative;
+
+    &:not(:last-child):before {
+      content: '';
+      position: absolute;
+      width: 67px;
+      height: 21px;
+      top: 65px;
+      right: -65px;
+      background: url("../img/why-section-balls.png") 0 0 no-repeat;
+    }
+
+    .why__item-img {
+      position: relative;
+      margin: 0 auto;
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      background-color: #F2F5F4;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 30px;
+        left: 42px;
+        background: url("../img/icon/why-section/1.svg") 0 0 no-repeat;
+      }
+    }
+    .why__item-strong:before {
+      left: 32px;
+      background: url("../img/icon/why-section/2.svg") 0 0 no-repeat;
+    }
+    .why__item-unique:before {
+      left: 30px;
+      background: url("../img/icon/why-section/3.svg") 0 0 no-repeat;
+    }
+    .why__item-title {
+      margin-top: 20px;
+      font-size: 27px;
+      color: $black;
+      font-weight: 700;
+    }
+    .why__item-subtitle {
+      margin-top: 20px;
+      font-weight: 300;
+      color: $body;
+    }
+  }
+}
+

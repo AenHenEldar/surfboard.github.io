@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  font-weight: 700;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+
+  .header__item {
+    text-align: center;
+    margin-right: 22px;
+
+    &:nth-last-child(2) {
+      margin-right: 65px;
+    }
+    &:last-child {
+      position: relative;
+      margin-right: 0px;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url("../img/icon/phone.svg") 0 0 no-repeat;
+        position: absolute;
+        left: -18px;
+      }
+    }
+  }
+}

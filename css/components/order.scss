@@ -1,0 +1,99 @@
+.order {
+  padding: 60px 0 85px 0;
+  background-color: $black;
+  color: #fff;
+
+  form {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .order__left {
+    width: 460px;
+  }
+
+  .order__right {
+    width: 430px;
+  }
+
+  .order__name {
+    margin-right: 35px;
+  }
+
+  .order__name,
+  .order__phone {
+    width: 211px;
+    display: inline-block;
+  }
+  .order__street {
+    margin: 15px 0 15px 0;
+  }
+  .order__address {
+    display: flex;
+    justify-content: space-between;
+  }
+  .order__house,
+  .order__building,
+  .order__apartment {
+    margin-right: 38px;
+  }
+
+  textarea {
+    min-height: 124px;
+    margin-bottom: 40px;
+  }
+
+  .order__right div {
+    cursor: pointer;
+    display: inline-block;
+
+    input {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .order__payment-cash {
+    margin-right: 15px;
+  }
+  .order__check {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .btn {
+    margin-top: 40px;
+  }
+  .order__reset {
+    padding: 0;
+    border-radius: 0;
+    width: auto;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 20px;
+
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+input,
+textarea {
+  padding: 20px 12px 20px 12px;
+  width: 100%;
+  border-radius: 4px;
+
+  &:hover {
+    border: 3px solid #FEDB3F;
+  }
+}
