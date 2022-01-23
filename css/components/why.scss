@@ -1,7 +1,10 @@
 .why {
-  padding: 100px 0 115px 0;
   color: $black;
   text-align: center;
+
+  .container {
+    padding-top: 100px;
+  }
 
   .why__subtitle {
     display: inline-block;
@@ -39,23 +42,14 @@
       border-radius: 50%;
       background-color: #F2F5F4;
 
-      &:before {
-        content: '';
+      .icon {
         position: absolute;
-        width: 70px;
-        height: 70px;
-        top: 30px;
-        left: 42px;
-        background: url("../img/icon/why-section/1.svg") 0 0 no-repeat;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 68px;
+        height: 68px;
       }
-    }
-    .why__item-strong:before {
-      left: 32px;
-      background: url("../img/icon/why-section/2.svg") 0 0 no-repeat;
-    }
-    .why__item-unique:before {
-      left: 30px;
-      background: url("../img/icon/why-section/3.svg") 0 0 no-repeat;
     }
     .why__item-title {
       margin-top: 20px;

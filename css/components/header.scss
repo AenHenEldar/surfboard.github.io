@@ -1,33 +1,32 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
+  align-items: center;
   font-weight: 700;
-}
 
-.header__list {
-  display: flex;
-  justify-content: space-between;
+  .icon {
+    width: 55px;
+    height: 40px;
+  }
+  .header__list {
+    display: flex;
+    justify-content: space-between;
 
-  .header__item {
-    text-align: center;
-    margin-right: 22px;
-
-    &:nth-last-child(2) {
-      margin-right: 65px;
+    .header__item {
+      margin-right: 22px;
     }
-    &:last-child {
-      position: relative;
-      margin-right: 0px;
+  }
+  .header__phone  {
+    position: relative;
+    padding-left: 20px;
 
-      &::before {
-        content: '';
-        width: 20px;
-        height: 20px;
-        background: url("../img/icon/phone.svg") 0 0 no-repeat;
-        position: absolute;
-        left: -18px;
-      }
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 14px;
     }
   }
 }

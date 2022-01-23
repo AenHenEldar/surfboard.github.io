@@ -10,6 +10,9 @@ $body: #666666;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
 @import "layout";
 
+section {
+  height: 100vh;
+}
 .container {
   width: 940px;
   margin: 0 auto;

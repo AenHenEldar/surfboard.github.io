@@ -1,59 +1,57 @@
 .order {
-  padding: 60px 0 85px 0;
-  background-color: $black;
+  background: linear-gradient(rgba(43, 43, 43, 0.5), rgba(43, 43, 43, 0.5)), url('../img/bg/order-bg.jpg') center center/cover no-repeat;
   color: #fff;
 
-  form {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+    .container {
+      padding-top: 60px;
+    }
 
-  h1 {
-    text-align: center;
-  }
+    .order__title {
+      text-align: center;
+    }
+}
 
-  .order__left {
+.form {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .form__left {
     width: 460px;
   }
 
-  .order__right {
+  .form__right {
     width: 430px;
   }
 
-  .order__name {
+  .form__name {
     margin-right: 35px;
   }
 
-  .order__name,
-  .order__phone {
+  .form__name,
+  .form__phone {
     width: 211px;
     display: inline-block;
   }
-  .order__street {
+  .form__street {
     margin: 15px 0 15px 0;
   }
-  .order__address {
+  .form__address {
     display: flex;
     justify-content: space-between;
   }
-  .order__house,
-  .order__building,
-  .order__apartment {
+  .form__house,
+  .form__building,
+  .form__apartment {
     margin-right: 38px;
   }
 
-  textarea {
-    min-height: 124px;
-    margin-bottom: 40px;
-  }
-
-  .order__right div {
+  .form__right .form__right-container {
     cursor: pointer;
     display: inline-block;
 
-    input {
+    .input {
       width: 25px;
       height: 25px;
       margin-right: 10px;
@@ -61,17 +59,17 @@
     }
   }
 
-  .order__payment-cash {
+  .form__payment-cash {
     margin-right: 15px;
   }
-  .order__check {
+  .form__check {
     margin-top: 20px;
     width: 100%;
   }
   .btn {
     margin-top: 40px;
   }
-  .order__reset {
+  .form__reset {
     padding: 0;
     border-radius: 0;
     width: auto;
@@ -87,8 +85,9 @@
   }
 }
 
-input,
-textarea {
+.input,
+.textarea {
+  border: 3px solid transparent;
   padding: 20px 12px 20px 12px;
   width: 100%;
   border-radius: 4px;
@@ -96,4 +95,8 @@ textarea {
   &:hover {
     border: 3px solid #FEDB3F;
   }
+}
+.textarea {
+  min-height: 124px;
+  margin-bottom: 40px;
 }

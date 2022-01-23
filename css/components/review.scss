@@ -1,34 +1,35 @@
 .review {
-  padding: 60px 0 60px 0;
   color: $black;
   text-align: center;
 
-  .review__main-review {
+  .review__main {
     overflow: hidden;
     text-align: left;
     margin-top: 32px;
     padding: 42px;
     background-color: #F8FAF9;
   }
-  .review__main-img {
+  .review__img-text {
+    padding-top: 40px;
+  }
+  .review__img {
     width: 253px;
     height: 264px;
     float: left;
     margin-right: 40px;
   }
-  .review__main-title {
-    margin-top: 40px;
+  .review__title {
     color: $black;
     font-weight: bold;
     font-size: 27px;
     line-height: 32px;
   }
-  .review__main-text {
+  .review__text {
     max-width: 760px;
     color: #666666;
     margin-top: 15px;
   }
-  .review__main-author {
+  .review__author {
     font-weight: 500;
     margin-top: 25px;
   }
