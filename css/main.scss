@@ -1,20 +1,33 @@
-//normalize
-@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//font
+$baseFontSize: 18px;
 
 //colors
 $black: #292929;
 $yellow: #FEDB3F;
 $body: #666666;
 
+//normalize
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+//media
+@import "media";
+
 //setups
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
 @import "layout";
 
-section {
-  height: 100vh;
+section,
+section iframe {
+  min-height: 100vh;
 }
 .container {
-  width: 940px;
+  height: 100%;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -24,3 +37,6 @@ section {
 @import "components/why";
 @import "components/review";
 @import "components/order";
+@import "components/footer";
+@import "components/board";
+@import "components/hamburger";

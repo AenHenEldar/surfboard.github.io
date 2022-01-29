@@ -1,10 +1,7 @@
 .order {
   background: linear-gradient(rgba(43, 43, 43, 0.5), rgba(43, 43, 43, 0.5)), url('../img/bg/order-bg.jpg') center center/cover no-repeat;
   color: #fff;
-
-    .container {
-      padding-top: 60px;
-    }
+  padding: rem(180px) 0;
 
     .order__title {
       text-align: center;
@@ -12,30 +9,44 @@
 }
 
 .form {
-  margin-top: 60px;
+  margin-top: rem(45px);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @include tablets {
+    justify-content: center;
+  }
+
   .form__left {
-    width: 460px;
+    width: rem(450px);
+    margin-top: rem(15px);
   }
 
   .form__right {
-    width: 430px;
+    width: rem(450px);
+    margin-top: rem(15px);
+
+    @include phones {
+      text-align: center;
+    }
   }
 
   .form__name {
-    margin-right: 35px;
+    float: left;
+  }
+  .form__phone {
+    float: right;
   }
 
   .form__name,
   .form__phone {
-    width: 211px;
+    width: 48%;
     display: inline-block;
+    margin-bottom: rem(15px);
   }
   .form__street {
-    margin: 15px 0 15px 0;
+    margin-bottom: rem(15px);
   }
   .form__address {
     display: flex;
@@ -44,7 +55,7 @@
   .form__house,
   .form__building,
   .form__apartment {
-    margin-right: 38px;
+    margin-right: rem(17px);
   }
 
   .form__right .form__right-container {
@@ -52,22 +63,22 @@
     display: inline-block;
 
     .input {
-      width: 25px;
-      height: 25px;
-      margin-right: 10px;
+      width: rem(25px);
+      height: rem(25px);
+      margin-right: rem(10px);
       vertical-align: middle;
     }
   }
 
   .form__payment-cash {
-    margin-right: 15px;
+    margin-right: rem(15px);
   }
   .form__check {
-    margin-top: 20px;
+    margin-top: rem(20px);
     width: 100%;
   }
   .btn {
-    margin-top: 40px;
+    margin-top: rem(40px);
   }
   .form__reset {
     padding: 0;
@@ -75,9 +86,9 @@
     width: auto;
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: rem(18px);
     color: #fff;
-    margin-left: 20px;
+    margin-left: rem(20px);
 
     &:hover {
       border: none;
@@ -87,16 +98,24 @@
 
 .input,
 .textarea {
-  border: 3px solid transparent;
-  padding: 20px 12px 20px 12px;
+  border: rem(3px) solid transparent;
+  padding: rem(20px) rem(12px);
   width: 100%;
-  border-radius: 4px;
+  border-radius: rem(4px);
 
   &:hover {
-    border: 3px solid #FEDB3F;
+    border: rem(3px) solid #FEDB3F;
+  }
+
+  @include tablets {
+    padding: rem(10px) rem(8px);
   }
 }
 .textarea {
-  min-height: 124px;
-  margin-bottom: 40px;
+  min-height: rem(124px);
+  margin-bottom: rem(40px);
+
+  @include tablets {
+    min-height: rem(82px);
+  }
 }

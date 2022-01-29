@@ -1,0 +1,35 @@
+.footer__wrapper {
+  padding: rem(18px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__list {
+    display: flex;
+
+    @include phones {
+      margin-top: rem(15px);
+    }
+  }
+  .footer__item  {
+    margin-left: rem(14px);
+
+    .icon {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+  .footer__address-title {
+    margin-bottom: rem(6px);
+
+    @include phones {
+      margin-bottom: rem(15px);
+    }
+  }
+
+}

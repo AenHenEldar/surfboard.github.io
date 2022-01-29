@@ -168,8 +168,8 @@ form {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
+  border: rem(1px) solid #c0c0c0;
+  margin: 0 rem(2px);
   padding: 0.35em 0.625em 0.75em;
 }
 
@@ -183,7 +183,7 @@ legend {
   border: 0; /* 1 */
   padding: 0;
   white-space: normal; /* 2 */
-  *margin-left: -7px; /* 3 */
+  *margin-left: rem(-7px); /* 3 */
 }
 
 /**
@@ -264,8 +264,8 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
+  *height: rem(13px); /* 3 */
+  *width: rem(13px); /* 3 */
 }
 
 /**
@@ -365,16 +365,27 @@ a {
   text-decoration: none;
 }
 
-body {
+html {
+  box-sizing: border-box;
   font-family: 'Alegreya Sans', 'SansSerif';
-  font-size: 18px;
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 700;
   text-transform: uppercase;
 }
 h4 {
-  font-size: 21px;
+  font-size: rem(21px);
 }

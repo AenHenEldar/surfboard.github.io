@@ -1,32 +1,53 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   font-weight: 700;
+  white-space: nowrap;
 
   .icon {
-    width: 55px;
-    height: 40px;
+    width: rem(55px);
+    height: rem(40px);
   }
   .header__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .header__item {
-      margin-right: 22px;
+      margin: rem(15px) rem(13px) rem(10px) rem(13px);
+    }
+
+    @include tablets {
+      background-color: #1968B1;
+      display: none;
     }
   }
   .header__phone  {
-    position: relative;
-    padding-left: 20px;
-
-    .icon {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 13px;
-      height: 14px;
+    @include tablets {
+      display: none;
     }
+  }
+
+  @include tablets {
+    align-items: center;
+  }
+  @include phones {
+    padding-bottom: 35%;
+  }
+}
+
+.phone  {
+  position: relative;
+  padding-left: rem(20px);
+  margin-top: rem(15px);
+
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(13px);
+    height: rem(14px);
   }
 }

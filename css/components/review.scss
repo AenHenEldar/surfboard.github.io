@@ -1,45 +1,60 @@
 .review {
   color: $black;
   text-align: center;
+  margin-top: 100px;
 
   .review__main {
     overflow: hidden;
     text-align: left;
-    margin-top: 32px;
-    padding: 42px;
+    margin-top: rem(32px);
+    padding: rem(42px);
     background-color: #F8FAF9;
+
+    @include tablets {
+      align-items: center;
+      text-align: center;
+    }
   }
   .review__img-text {
-    padding-top: 40px;
+    padding-top: rem(40px);
   }
   .review__img {
-    width: 253px;
-    height: 264px;
+    display: inline-block;
+    background: url("../img/review-section/main.jpg") center center/cover no-repeat;
+    width: rem(253px);
+    height: rem(264px);
     float: left;
-    margin-right: 40px;
+    margin-right: rem(40px);
+
+    @include tablets {
+      margin-right: 0;
+      float: none;
+      width: rem(130px);
+      height: rem(130px);
+    }
   }
   .review__title {
     color: $black;
     font-weight: bold;
-    font-size: 27px;
-    line-height: 32px;
+    font-size: rem(27px);
+    line-height: rem(32px);
   }
   .review__text {
-    max-width: 760px;
+    max-width: rem(760px);
     color: #666666;
-    margin-top: 15px;
+    margin-top: rem(15px);
   }
   .review__author {
     font-weight: 500;
-    margin-top: 25px;
+    margin-top: rem(25px);
   }
 
   .review__list {
     display: flex;
-    margin-top: 15px;
+    margin-top: rem(15px);
     justify-content: center;
   }
   .review__item {
-    margin-right: 5px;
+    margin-right: rem(5px);
   }
 }

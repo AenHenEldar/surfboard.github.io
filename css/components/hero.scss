@@ -1,10 +1,15 @@
 .hero {
   background: url('../img/bg/hero-bg.png') center center/cover no-repeat;
+  background-color: #1968B1;
   color: white;
   position: relative;
 
   .container {
-    padding-top: 25px;
+    padding-top: rem(25px);
+  }
+
+  @include tablets {
+    background-position: right top rem(91px);
   }
 }
 
@@ -13,49 +18,68 @@
 }
 
 .hero__container {
-  padding: 100px 0 170px 0;
+  padding: rem(100px) 0 rem(170px) 0;
 
   .hero__title {
-    width: 400px;
+    max-width: rem(400px);
+
+    @include tablets {
+      max-width: rem(670px);
+    }
   }
-  .hero__title {
-    width: 382px;
-    margin-top: 20px;
+  .hero__subtitle {
+    max-width: rem(382px);
+    margin-top: rem(20px);
   }
   .btn {
-    margin-top: 40px;
+    margin-top: rem(40px);
+  }
+
+  @include tablets {
+    padding: 0;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
 .btn {
   text-transform: uppercase;
-  padding: 21px;
-  min-width: 156px;
+  padding: rem(21px);
+  min-width: rem(156px);
   color: #000;
-  font-size: 16px;
+  font-size: rem(16px);
   background-color: $yellow;
-  border-radius: 100px;
+  border-radius: rem(100px);
   border: none;
   font-weight: 800;
 }
 
 .hero__icons {
   position: absolute;
-  bottom: 70px;
+  bottom: rem(70px);
   display: flex;
   justify-content: start;
-  font-size: 16px;
+  font-size: rem(16px);
+
+  @include tablets {
+    display: none;
+  }
 
   .icon {
     position: absolute;
     left: 0;
-    height: 35px;
-    width: 35px;
+    height: rem(35px);
+    width: rem(35px);
   }
   .hero__icon {
-    padding-right: 33px;
-    padding-left: 50px;
-    width: 70px;
+    padding-right: rem(33px);
+    padding-left: rem(50px);
+    width: rem(70px);
     position: relative;
   }
 }
@@ -65,25 +89,25 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
-  top: 210px;
-  right: 45px;
+  top: rem(210px);
+  right: rem(45px);
 
   .nav__item {
-    width: 10px;
-    height: 10px;
+    width: rem(10px);
+    height: rem(10px);
     background-color: #fff;
     border-radius: 50%;
-    margin-top: 13px;
+    margin-top: rem(13px);
     position: relative;
 
     &:hover:before {
       content: '';
       position: absolute;
-      width: 18px;
-      height: 18px;
-      left: -5px;
-      top: -5px;
-      border: 1px solid #fff;
+      width: rem(18px);
+      height: rem(18px);
+      left: rem(-5px);
+      top: rem(-5px);
+      border: rem(1px) solid #fff;
       border-radius: 50%;
     }
   }

@@ -1,44 +1,56 @@
 .why {
   color: $black;
   text-align: center;
+  padding: rem(100px) 0;
 
-  .container {
-    padding-top: 100px;
+  @include phones {
+    padding: rem(52px) 0;
   }
 
   .why__subtitle {
     display: inline-block;
-    width: 436px;
+    max-width: rem(436px);
     color: $body;
-    margin-top: 20px;
+    margin-top: rem(20px);
   }
 
   .why__list {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: rem(50px);
+
+    @include phones {
+      flex-direction: column;
+    }
   }
 
   .why__item {
-    width: 280px;
+    width: rem(280px);
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     &:not(:last-child):before {
       content: '';
       position: absolute;
-      width: 67px;
-      height: 21px;
-      top: 65px;
-      right: -65px;
+      width: rem(67px);
+      height: rem(21px);
+      top: rem(65px);
+      right: rem(-65px);
       background: url("../img/why-section-balls.png") 0 0 no-repeat;
+
+      @include tablets {
+        display: none;
+      }
     }
 
     .why__item-img {
+      flex-shrink: 0;
       position: relative;
       margin: 0 auto;
-      width: 128px;
-      height: 128px;
+      width: rem(128px);
+      height: rem(128px);
       border-radius: 50%;
       background-color: #F2F5F4;
 
@@ -47,20 +59,31 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 68px;
-        height: 68px;
+        width: rem(68px);
+        height: rem(68px);
+      }
+
+      @include phones {
+        margin-right: rem(15px);
       }
     }
     .why__item-title {
-      margin-top: 20px;
-      font-size: 27px;
+      margin-top: rem(20px);
+      font-size: rem(27px);
       color: $black;
       font-weight: 700;
     }
     .why__item-subtitle {
-      margin-top: 20px;
+      margin-top: rem(20px);
       font-weight: 300;
       color: $body;
+    }
+
+    @include phones {
+      width: auto;
+      flex-direction: row;
+      text-align: left;
+      margin-bottom: rem(30px);
     }
   }
 }
