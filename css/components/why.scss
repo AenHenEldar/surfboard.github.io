@@ -85,6 +85,11 @@
       text-align: left;
       margin-bottom: rem(30px);
     }
+    &:last-child {
+      @include phones {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

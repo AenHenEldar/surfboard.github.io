@@ -23,6 +23,10 @@
       width: rem(20px);
       height: rem(20px);
     }
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
   .footer__address-title {
     margin-bottom: rem(6px);
