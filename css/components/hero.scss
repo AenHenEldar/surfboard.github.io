@@ -71,15 +71,12 @@
   }
 
   .icon {
-    position: absolute;
-    left: 0;
     height: rem(35px);
     width: rem(35px);
   }
   .hero__icon {
     padding-right: rem(33px);
-    padding-left: rem(50px);
-    width: rem(70px);
+    width: rem(100px);
     position: relative;
   }
 }

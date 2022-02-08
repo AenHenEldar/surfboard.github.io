@@ -30,6 +30,26 @@ section iframe {
   max-width: 940px;
   margin: 0 auto;
 }
+.modal {
+  display: none;
+  background: black;
+  color: $yellow;
+  border-radius: rem(30px);
+  padding: rem(30px);
+  padding-bottom: rem(50px);
+  text-align: center;
+
+  &.error-modal {
+    color: red;
+  }
+
+  .btn:hover {
+    background: rgba(254, 219, 63, 0.8);
+  }
+  .modal__button-container {
+    margin-top: rem(40px);
+  }
+}
 
 //components
 @import "components/header";
@@ -39,4 +59,5 @@ section iframe {
 @import "components/order";
 @import "components/footer";
 @import "components/board";
+@import "components/team";
 @import "components/hamburger";

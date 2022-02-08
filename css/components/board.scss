@@ -1,33 +1,82 @@
 .board {
-  background:
-          url("../img/bg/board.png") left 20% center no-repeat,
-          url("../img/bg/board-bg.svg") left 20% center no-repeat;
   background-color: #F8FAF9;
   color: #292929;
+
+  .container {
+    position: relative;
+  }
+
+  .bx-wrapper {
+    box-shadow: none;
+    border: none;
+    background: #F8FAF9;
+  }
+
+  @for $i from 1 through 2 {
+    .board__slider-item:nth-child(#{$i}) {
+      .board__bg {
+        background:
+                url("../img/bg/slider/#{$i}.png") left 20% center/contain no-repeat,
+                url("../img/bg/board-bg.svg") left 20% center/contain no-repeat;
+      }
+    }
+  }
+
+  .board__bg {
+    flex-shrink: 0;
+    display: inline-block;
+    width: rem(420px);
+    height: rem(540px);
+    background:
+            url("../img/bg/slider/1.png") left 20% center/contain no-repeat,
+            url("../img/bg/board-bg.svg") left 20% center/contain no-repeat;
+
+    @include tablets {
+      width: rem(320px);
+      height: rem(420px);
+    }
+    @include phones {
+      width: rem(250px);
+      height: rem(330px);
+    }
+  }
+
+  .board__slider-item {
+    padding-top: rem(66px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   @include tablets {
     background-position: top center, top 12% center;
   }
 
-  .container {
+  .board__list {
+    flex-shrink: 0;
     position: relative;
-    display: flex;
-    justify-content: right;
-    padding: rem(80px) 0;
+    min-height: rem(470px);
+    display: inline-block;
+    width: rem(368px);
+    max-width: rem(368px);
+    padding-top: rem(140px);
+    margin-left: rem(80px);
+    text-align: center;
 
     @include tablets {
-      text-align: center;
-      justify-content: center;
-      padding-top: rem(300px);
-    }
-  }
-
-  .board__wrapper {
-    max-width: rem(375px);
-    margin-top: rem(66px);
-
-    @include tablets {
+      margin-left: 0;
+      width: rem(528px);
       max-width: rem(528px);
+      padding-top: rem(10px);
+    }
+    @include phones {
+      width: rem(380px);
+      max-width: rem(380px);
     }
   }
   .board__item {
@@ -35,7 +84,9 @@
   }
   .board__img {
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url("../img/board-info.jpg") center center/cover no-repeat;
     width: rem(91px);
     height: rem(91px);
@@ -116,14 +167,17 @@
     line-height: rem(60px);
     text-transform: uppercase;
     color: #151515;
-    margin-right: rem(50px);
+    width: rem(190px);
+    text-align: left;
   }
-  .btn {
-    display: inline-block;
+  .board__order {
+    display: flex;
+    justify-content: center;
   }
 
   .arrow-left,
   .arrow-right {
+    z-index: 99;
     position: absolute;
     width: rem(13.5px);
     height: rem(27px);
