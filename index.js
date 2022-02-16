@@ -80,13 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     $('[data-scroll-to]').click(e => {
-        e.preventDefault();
-
         const $this = $(e.currentTarget);
-        const target = $this.attr('data-scroll-to');
-        const reqSection = $(`[data-section-id=${target}]`);
+        if(!$this.hasClass('form__link')) {
+            e.preventDefault();
 
-        slideSection(reqSection.index(), isIndex = true);
+            const target = $this.attr('data-scroll-to');
+            const reqSection = $(`[data-section-id=${target}]`);
+
+            slideSection(reqSection.index(), isIndex = true);
+        }
     })
 
     hamburger.addEventListener('click', () => {
@@ -100,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    document.querySelector('.form').addEventListener('submit', (e) => {
+    document.querySelector('#form').addEventListener('submit', (e) => {
         e.preventDefault();
 
         const form = $(e.currentTarget);
@@ -127,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             request.done(data => {
                 modalContent.text = data.message;
+                form[0].reset();
             });
             request.fail(error => {
                 modalContent.text = error.responseJSON.message;
