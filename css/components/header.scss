@@ -35,6 +35,10 @@
   @include phones {
     padding-bottom: 35%;
   }
+
+  .hamburger-menu__item {
+    z-index: 3;
+  }
 }
 
 .phone  {

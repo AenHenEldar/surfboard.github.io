@@ -16,6 +16,10 @@
   transition: .5s ease-in-out;
   cursor: pointer;
 
+  &.hamburger_black span {
+    background: #000;
+  }
+
   span {
     z-index: 999;
     display: block;

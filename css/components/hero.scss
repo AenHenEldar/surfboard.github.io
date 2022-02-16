@@ -102,10 +102,24 @@
       position: absolute;
       width: rem(18px);
       height: rem(18px);
-      left: rem(-5px);
-      top: rem(-5px);
+      left: rem(-4px);
+      top: rem(-4px);
       border: rem(1px) solid #fff;
       border-radius: 50%;
+    }
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &.nav_black {
+    .nav__item {
+      &:before {
+        border-color: #000;
+      }
+
+      background-color: #000;
     }
   }
 }

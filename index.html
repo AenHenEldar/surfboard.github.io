@@ -11,18 +11,37 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <nav class="nav" id="nav">
+        <a data-scroll-to="hero" href="#" class="nav__item"></a>
+        <a data-scroll-to="why" href="#" class="nav__item"></a>
+        <a data-scroll-to="board" href="#" class="nav__item"></a>
+        <a data-scroll-to="team" href="#" class="nav__item"></a>
+        <a data-scroll-to="menu" href="#" class="nav__item"></a>
+        <a data-scroll-to="review" href="#" class="nav__item"></a>
+        <a data-scroll-to="video" href="#" class="nav__item"></a>
+        <a data-scroll-to="order" href="#" class="nav__item"></a>
+        <a data-scroll-to="map" href="#" class="nav__item"></a>
+    </nav>
+    <a href="#" class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
     <div class="wrapper">
         <div class="wrapper__container">
-            <section class="hero active">
+            <section data-sidemenu-theme="white" data-section-id="hero" class="hero active">
                 <div class="hamburger-menu">
                     <ul class="hamburger-menu__list">
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">О нас</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Серфборды</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Команда</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Меню</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Отзывы</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Как мы работаем</a></li>
-                        <li class="hamburger-menu__item"><a class="hamburger-menu__link" href="#">Контакты </a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="why" class="hamburger-menu__link" href="#">О нас</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="board" class="hamburger-menu__link" href="#">Серфборды</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="team" class="hamburger-menu__link" href="#">Команда</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="menu" class="hamburger-menu__link" href="#">Меню</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="review" class="hamburger-menu__link" href="#">Отзывы</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="video" class="hamburger-menu__link" href="#">Как мы работаем</a></li>
+                        <li class="hamburger-menu__item"><a data-scroll-to="map" class="hamburger-menu__link" href="#">Контакты </a></li>
                     </ul>
                 </div>
                 <div class="container">
@@ -33,13 +52,13 @@
                             </svg>
                         </a>
                         <ul class="header__list">
-                            <li class="header__item"><a href="#">О нас</a></li>
-                            <li class="header__item"><a href="#">Серфборды</a></li>
-                            <li class="header__item"><a href="#">Команда</a></li>
-                            <li class="header__item"><a href="#">Меню</a></li>
-                            <li class="header__item"><a href="#">Отзывы</a></li>
-                            <li class="header__item"><a href="#">Как мы работаем</a></li>
-                            <li class="header__item"><a href="#">Контакты </a></li>
+                            <li class="header__item"><a data-scroll-to="why" href="#">О нас</a></li>
+                            <li class="header__item"><a data-scroll-to="board" href="#">Серфборды</a></li>
+                            <li class="header__item"><a data-scroll-to="team" href="#">Команда</a></li>
+                            <li class="header__item"><a data-scroll-to="menu" href="#">Меню</a></li>
+                            <li class="header__item"><a data-scroll-to="review" href="#">Отзывы</a></li>
+                            <li class="header__item"><a data-scroll-to="video" href="#">Как мы работаем</a></li>
+                            <li class="header__item"><a data-scroll-to="map" href="#">Контакты </a></li>
                         </ul>
                         <a class="phone header__phone" href="tel:8 800 903 90 90">
                             <svg class="icon">
@@ -49,19 +68,11 @@
                             </svg>
                             8 800 903 90 90
                         </a>
-                        <a href="#" class="hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
                     </div>
                     <div class="hero__container">
                         <h1 class="hero__title">Профессиональные доски для серфинга</h1>
                         <h4 class="hero__subtitle">Самый большой выбор серфбордов в мире</h4>
-                        <a class="hero__link" href="#"><button class="btn">ЗАКАЗАТЬ</button></a>
+                        <a data-scroll-to="order" class="hero__link" href="#"><button class="btn">ЗАКАЗАТЬ</button></a>
                     </div>
                     <ul class="hero__icons">
                         <li class="hero__icon hero__icon_surf">
@@ -85,7 +96,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="why">
+            <section data-sidemenu-theme="black" data-section-id="why" class="why">
                 <div class="container">
                     <h1 class="why__title">ПОЧЕМУ SURFBOARD?</h1>
                     <div class="why__subtitle">Мы создаем уникальные и качественные доски из прочных и экологичных материалов.</div>
@@ -126,7 +137,7 @@
                     </div>
                 </div>
             </section>
-            <section class="board">
+            <section data-sidemenu-theme="black" data-section-id="board" class="board">
                 <div class="container">
                     <div class="board__wrapper">
                         <svg class="icon arrow-left">
@@ -197,7 +208,7 @@
 <strong>от 30 сантиметров</strong></pre></div>
                                     <div class="board__order">
                                         <div class="board__item board__price">12000 ₽</div>
-                                        <a class="board__item"><button class="btn">ЗАКАЗАТЬ</button></a>
+                                        <a data-scroll-to="order" class="board__item"><button class="btn">ЗАКАЗАТЬ</button></a>
                                     </div>
                                 </div>
                             </li>
@@ -260,7 +271,7 @@
 <strong>от 40 сантиметров</strong></pre></div>
                                     <div class="board__order">
                                         <div class="board__item board__price">7000 ₽</div>
-                                        <a class="board__item"><button class="btn">ЗАКАЗАТЬ</button></a>
+                                        <a data-scroll-to="order" class="board__item"><button class="btn">ЗАКАЗАТЬ</button></a>
                                     </div>
                                 </div>
                             </li>
@@ -268,7 +279,7 @@
                     </div>
                 </div>
             </section>
-            <section class="team">
+            <section data-sidemenu-theme="black" data-section-id="team" class="team">
                 <div class="container">
                     <h1 class="team__title">команда</h1>
                     <div class="team__list team__list-desktop">
@@ -342,7 +353,7 @@
                     </div>
                 </div>
             </section>
-            <section class="menu">
+            <section data-sidemenu-theme="white" data-section-id="menu" class="menu">
                 <div class="menu__title"><h1>Меню</h1></div>
                 <div class="menu__list">
                     <div class="menu__item">
@@ -377,7 +388,7 @@
                     </div>
                 </div>
             </section>
-            <section class="review">
+            <section data-sidemenu-theme="black" data-section-id="review" class="review">
                 <div class="container">
                     <h1 class="review__main-title">ОТЗЫВЫ</h1>
                     <div class="review__main">
@@ -415,11 +426,11 @@
                     </div>
                 </div>
             </section>
-            <section class="video">
+            <section data-sidemenu-theme="black" data-section-id="video" class="video">
                 <h1 class="video__title">как мы работаем</h1>
                 <div class="player" id="player"></div>
             </section>
-            <section class="order">
+            <section data-sidemenu-theme="white" data-section-id="order" class="order">
                 <div class="container">
                     <h1 class="order__title">ЗАКАЖИТЕ ДОСКУ</h1>
                     <form class="form">
@@ -485,13 +496,13 @@
                                     Не перезванивать
                                 </label>
                             </div>
-                            <a class="form__link" href="#"><button class="btn" type="submit">ЗАКАЗАТЬ</button></a>
+                            <a data-scroll-to="order" class="form__link" href="#"><button class="btn" type="submit">ЗАКАЗАТЬ</button></a>
                             <a class="form__link" href="#"><input class="form__reset" type="reset" value="Очистить" /></a>
                         </div>
                     </form>
                 </div>
             </section>
-            <section class="map">
+            <section data-sidemenu-theme="black" data-section-id="map" class="map">
                 <div class="map__wrapper" id="map" style="width: 100vw; height: 90vh"></div>
                 <footer class="footer">
                     <div class="container">

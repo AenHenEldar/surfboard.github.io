@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = $('section');
     let inScroll = false;
 
-    const slideSection = (direction) => {
+    const slideSection = (direction, isIndex) => {
         const section = $('section.active');
         let index;
 
@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(direction === 'next' && section.next().length) {
                 index = section.next().index();
-            }
-            if(direction === 'prev' && section.prev().length) {
+            } else if(direction === 'prev' && section.prev().length) {
                 index = section.prev().index();
+            } else if(isIndex) {
+                index = direction;
             }
 
             if(index !== undefined) {
@@ -35,6 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.removeClass('active');
                 sections.eq(index).addClass('active');
                 display.style.transform = `translateY(${position}%)`;
+
+                const curSec = sections.eq(index);
+                const menuItem = curSec.attr('data-sidemenu-theme');
+                const nav = $('#nav');
+                const hamburger = $('#hamburger');
+
+                if(menuItem === 'black') {
+                    nav.addClass('nav_black');
+                    hamburger.addClass('hamburger_black');
+                } else {
+                    nav.removeClass('nav_black');
+                    hamburger.removeClass('hamburger_black');
+                }
             }
             inScroll = false;
             /*setTimeout(() => {
@@ -63,6 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     break
             }
         }
+    })
+
+    $('[data-scroll-to]').click(e => {
+        e.preventDefault();
+
+        const $this = $(e.currentTarget);
+        const target = $this.attr('data-scroll-to');
+        const reqSection = $(`[data-section-id=${target}]`);
+
+        slideSection(reqSection.index(), isIndex = true);
     })
 
     hamburger.addEventListener('click', () => {

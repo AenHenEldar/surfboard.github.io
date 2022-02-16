@@ -23,12 +23,14 @@ $body: #666666;
 section {
   height: 100vh;
 }
+
 .container {
   height: 100%;
   width: 95%;
   max-width: 940px;
   margin: 0 auto;
 }
+
 .wrapper {
   position: relative;
   height: 100vh;
@@ -40,6 +42,7 @@ section {
     will-change: transform;
   }
 }
+
 .modal {
   display: none;
   background: black;
