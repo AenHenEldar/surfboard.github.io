@@ -1,0 +1,26 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F8FAF9;
+  color: $black;
+
+  &__title {
+    margin-bottom: rem(30px);
+  }
+}
+
+.player {
+  width: rem(660px);
+  height: rem(390px);
+
+  @include tablets {
+    width: rem(600px);
+    height: rem(350px);
+  }
+  @include phones {
+    width: rem(400px);
+    height: rem(230px);
+  }
+}

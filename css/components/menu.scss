@@ -1,0 +1,101 @@
+.menu {
+  position: relative;
+  background: url("../img/bg/menu-bg.jpg") center center/cover no-repeat;
+
+  .menu__title {
+    position: absolute;
+    top: rem(110px);
+    left: rem(85px);
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+  }
+
+  .menu__item {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:before {
+      content: '';
+      z-index: 33;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: rem(100px);
+      @include phones {
+        width: 90px;
+      }
+      height: 100%;
+      background: url("../img/menu-section/1.jpg") 44% center/cover no-repeat;
+    }
+    &:nth-child(2) {
+      &:before {
+        background: url("../img/menu-section/2.jpg") 50% center/cover no-repeat;
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        background: url("../img/menu-section/3.jpg") 50% center/cover no-repeat;
+      }
+    }
+
+    &.active {
+      @include phones {
+        width: 100%;
+      }
+
+      .menu__text {
+        display: block;
+      }
+    }
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        &.active {
+          .menu__text {
+            @include phones {
+              position: absolute;
+              top: 0;
+              left: 90px;
+              width: calc(100vw - #{$i} * 90px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu__subtitle {
+    z-index: 44;
+    display: flex;
+    color: white;
+    transform: rotate(-90deg) translateX(rem(70px));
+    align-self: flex-end;
+    width: rem(100px);
+
+    @include phones {
+      width: 90px;
+    }
+  }
+
+  .menu__text {
+    z-index: 99;
+    padding: rem(30px) rem(40px);
+    max-width: rem(485px);
+    display: none;
+    font-size: rem(16.0138px);
+    line-height: rem(24px);
+    color: white;
+    height: 100%;
+    background: rgba(51, 53, 55, 0.9);
+    backdrop-filter: blur(10px);
+  }
+}

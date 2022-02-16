@@ -12,6 +12,58 @@ const validateFields = (form, fields) => {
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const display = document.querySelector('.wrapper__container');
+    const sections = $('section');
+    let inScroll = false;
+
+    const slideSection = (direction) => {
+        const section = $('section.active');
+        let index;
+
+        if(!inScroll) {
+            inScroll = true;
+
+            if(direction === 'next' && section.next().length) {
+                index = section.next().index();
+            }
+            if(direction === 'prev' && section.prev().length) {
+                index = section.prev().index();
+            }
+
+            if(index !== undefined) {
+                const position = index * -100;
+                section.removeClass('active');
+                sections.eq(index).addClass('active');
+                display.style.transform = `translateY(${position}%)`;
+            }
+            inScroll = false;
+            /*setTimeout(() => {
+                inScroll = false;
+            }, 1000)*/
+        }
+    }
+
+    window.addEventListener('wheel', e => {
+        if(e.deltaY < 0) {
+            slideSection('prev')
+        } else if(e.deltaY > 0) {
+            slideSection('next')
+        }
+    })
+    window.addEventListener('keydown', e => {
+        const tagName = e.target.tagName.toLowerCase();
+
+        if(tagName !== 'input' && tagName !== 'textarea') {
+            switch (e.keyCode) {
+                case 38: //prev
+                    slideSection('prev')
+                    break
+                case 40: //next
+                    slideSection('next')
+                    break
+            }
+        }
+    })
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');

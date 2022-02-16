@@ -7,9 +7,11 @@
   }
 
   .bx-wrapper {
+    height: 100vh;
     box-shadow: none;
     border: none;
     background: #F8FAF9;
+    margin-bottom: 0 !important;
   }
 
   @for $i from 1 through 2 {
@@ -26,18 +28,17 @@
     flex-shrink: 0;
     display: inline-block;
     width: rem(420px);
-    height: rem(540px);
     background:
             url("../img/bg/slider/1.png") left 20% center/contain no-repeat,
             url("../img/bg/board-bg.svg") left 20% center/contain no-repeat;
 
     @include tablets {
-      width: rem(320px);
-      height: rem(420px);
+      width: rem(200px);
+      height: rem(260px);
     }
     @include phones {
-      width: rem(250px);
-      height: rem(330px);
+      width: rem(150px);
+      height: rem(230px);
     }
   }
 

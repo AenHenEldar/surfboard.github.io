@@ -20,15 +20,25 @@ $body: #666666;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
 @import "layout";
 
-section,
-section iframe {
-  min-height: 100vh;
+section {
+  height: 100vh;
 }
 .container {
   height: 100%;
   width: 95%;
   max-width: 940px;
   margin: 0 auto;
+}
+.wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .wrapper__container {
+    height: 100%;
+    transition: transform 1s;
+    will-change: transform;
+  }
 }
 .modal {
   display: none;
@@ -55,9 +65,11 @@ section iframe {
 @import "components/header";
 @import "components/hero";
 @import "components/why";
+@import "components/team";
+@import "components/menu";
 @import "components/review";
+@import "components/video";
 @import "components/order";
 @import "components/footer";
 @import "components/board";
-@import "components/team";
 @import "components/hamburger";

@@ -1,0 +1,22 @@
+.menu .menu__title {
+  position: absolute;
+  top: rem(110px);
+  left: rem(85px);
+}
+.menu h1 {
+  color: #fff;
+}
+.menu .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.menu .menu__item {
+  width: 100%;
+  height: rem(100px);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
